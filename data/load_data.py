@@ -276,6 +276,7 @@ def adding_encoded_metadata(
         # print("enc_temporal:", enc_temporal)
         # print("mtd_enc:", len(mtd_enc))
         # print("mormalized_mtd:", len(mormalized_mtd))
+        print("-------------------------------------------mormalized_mtd:", mormalized_mtd.shape)
 
         dict_paths["MTD_AERIAL"].append(mormalized_mtd)
         dict_paths["PATH_IMG_DATE"].append(metadata_dict[curr_img]["date"])
