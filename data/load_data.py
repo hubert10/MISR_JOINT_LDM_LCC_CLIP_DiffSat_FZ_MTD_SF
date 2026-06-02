@@ -201,7 +201,7 @@ def adding_encoded_metadata(
     def norm_alti(alti: int) -> float:
         min_alti = 0
         max_alti = 3164.9099121094  ### MAX DATASET
-        return [(alti - min_alti) / (max_alti - min_alti)]
+        return (alti - min_alti) / (max_alti - min_alti)
 
     def format_cam(cam: str) -> np.array:
         return [[1, 0] if "UCE" in cam else [0, 1]][0]
