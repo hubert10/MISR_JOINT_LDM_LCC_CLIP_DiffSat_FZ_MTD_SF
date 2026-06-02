@@ -39,9 +39,9 @@ class FitDataset(Dataset):
         self.use_metadata = config["use_metadata"]
         if self.use_metadata == True:
             print("***************************************:", len(dict_files["MTD_AERIAL"]))
-            for i, x in enumerate(dict_files["MTD_AERIAL"]):
-                if not isinstance(x, (str, dict, list, int, float)):
-                    print(i, type(x), x)
+            # for i, x in enumerate(dict_files["MTD_AERIAL"]):
+            #     if not isinstance(x, (str, dict, list, int, float)):
+            #         print(i, type(x), x)
 
 
             self.list_metadata = np.array(dict_files["MTD_AERIAL"])
