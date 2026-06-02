@@ -160,7 +160,7 @@ class SatUNet(ModelMixin, ConfigMixin, UNet2DConditionLoadersMixin):
             ]
         )
         for p in self.lr_projs.parameters():
-            p.requires_grad = True
+            p.requires_grad = False
 
         # Build HR features projections (if available)
         self.hr_projs = nn.ModuleList(
@@ -172,7 +172,7 @@ class SatUNet(ModelMixin, ConfigMixin, UNet2DConditionLoadersMixin):
         )
 
         for p in self.hr_projs.parameters():
-            p.requires_grad = True
+            p.requires_grad = False
 
         # input
         conv_in_padding = (conv_in_kernel - 1) // 2
