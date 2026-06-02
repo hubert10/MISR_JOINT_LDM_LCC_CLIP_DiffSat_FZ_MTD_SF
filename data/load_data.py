@@ -201,7 +201,7 @@ def adding_encoded_metadata(
     def norm_alti(alti: int) -> float:
         min_alti = 0
         max_alti = 3164.9099121094  ### MAX DATASET
-        return (alti - min_alti) / (max_alti - min_alti)
+        return [(alti - min_alti) / (max_alti - min_alti)]
 
     def format_cam(cam: str) -> np.array:
         return [[1, 0] if "UCE" in cam else [0, 1]][0]
@@ -237,7 +237,7 @@ def adding_encoded_metadata(
         #     norm(cos_time),
         # ]
 
-        return [int(year), int(month), int(day), sec_day]
+        return [float(year), float(month), float(day), sec_day]
 
     def metadata_normalize(metadata, base_year=2018, scale=1000):
         x, y, mean_alti, year, month, day, time = metadata
