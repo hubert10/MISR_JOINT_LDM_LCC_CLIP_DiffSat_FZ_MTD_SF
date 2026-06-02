@@ -38,7 +38,7 @@ class FitDataset(Dataset):
         self.use_augmentation = use_augmentation
         self.use_metadata = config["use_metadata"]
         if self.use_metadata == True:
-            print("***************************************:", np.array(dict_files["MTD_AERIAL"]).shape)
+            print("***************************************:", len(dict_files["MTD_AERIAL"]))
             self.list_metadata = np.array(dict_files["MTD_AERIAL"])
         self.ref_year = config["ref_year"]
         self.ref_date = config["ref_date"]
