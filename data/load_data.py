@@ -269,13 +269,13 @@ def adding_encoded_metadata(
         mtd_enc = enc_coords + mean_alti + enc_temporal
         mormalized_mtd = metadata_normalize(mtd_enc)
 
-        # print("enc_coords:", len(enc_coords))
-        # print("mean_alti:", len(mean_alti))
-        # print("enc_camera:", len(enc_camera))
-        # print("enc_temporal:", len(enc_temporal))
-        # print("enc_temporal:", enc_temporal)
-        # print("mtd_enc:", len(mtd_enc))
-        # print("mormalized_mtd:", len(mormalized_mtd))
+        print("enc_coords:", len(enc_coords))
+        print("mean_alti:", len(mean_alti))
+        print("enc_camera:", len(enc_camera))
+        print("enc_temporal:", len(enc_temporal))
+        print("enc_temporal:", enc_temporal)
+        print("mtd_enc:", len(mtd_enc))
+        print("mormalized_mtd:", len(mormalized_mtd))
 
         dict_paths["MTD_AERIAL"].append(mormalized_mtd)
         dict_paths["PATH_IMG_DATE"].append(metadata_dict[curr_img]["date"])
