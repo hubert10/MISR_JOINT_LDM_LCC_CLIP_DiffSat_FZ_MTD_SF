@@ -237,7 +237,7 @@ def adding_encoded_metadata(
         #     norm(cos_time),
         # ]
 
-        return [int(year)] + [int(month), int(day), sec_day]
+        return [int(year), int(month), int(day), sec_day]
 
     def metadata_normalize(metadata, base_year=2018, scale=1000):
         x, y, mean_alti, year, month, day, time = metadata
@@ -248,7 +248,7 @@ def adding_encoded_metadata(
         month = month / 12 * scale
         day = day / 31 * scale
         time = time / 86400 * scale
-        return [x, y, mean_alti, year, month, day, time]
+        return torch.tensor([x, y, mean_alti, year, month, day, time])
 
     with open(os.path.join(DATA_DIR, path_metadata_file), "r") as f:
         metadata_dict = json.load(f)
@@ -275,9 +275,9 @@ def adding_encoded_metadata(
         # print("enc_temporal:", len(enc_temporal))
         # print("enc_temporal:", enc_temporal)
         # print("mtd_enc:", len(mtd_enc))
-        # print("mormalized_mtd:", len(mormalized_mtd))
-        # print("-------------------------------------------mormalized_mtd:", mormalized_mtd.shape)
-
+        
+        # print("mormalized_mtd:", mormalized_mtd)
+    
         dict_paths["MTD_AERIAL"].append(mormalized_mtd)
         dict_paths["PATH_IMG_DATE"].append(metadata_dict[curr_img]["date"])
 

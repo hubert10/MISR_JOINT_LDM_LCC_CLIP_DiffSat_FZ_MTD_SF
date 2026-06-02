@@ -1,7 +1,7 @@
 data:
-    path_aerial_train: "FLAIR/flair_aerial_test/" # ./flair_aerial_train/
-    path_sen_train: "FLAIR/flair_sen_test/"  # ./flair_sen_train/
-    path_labels_train: "FLAIR/flair_labels_test/" # ./flair_labels_train/
+    path_aerial_train: "FLAIR/flair_aerial_train/" # ./flair_aerial_train/
+    path_sen_train: "FLAIR/flair_sen_train/"  # ./flair_sen_train/
+    path_labels_train: "FLAIR/flair_labels_train/" # ./flair_labels_train/
  
     path_aerial_test: "FLAIR/flair_aerial_test/" # ./flair_2_aerial_test/
     path_sen_test: "FLAIR/flair_sen_test/" # ./flair_2_sen_test/
