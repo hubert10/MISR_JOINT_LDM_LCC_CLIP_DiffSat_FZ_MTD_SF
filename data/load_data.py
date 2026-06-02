@@ -248,7 +248,7 @@ def adding_encoded_metadata(
         month = month / 12 * scale
         day = day / 31 * scale
         time = time / 86400 * scale
-        return torch.tensor([x, y, mean_alti, year, month, day, time])
+        return [x, y, mean_alti, year, month, day, time]
 
     with open(os.path.join(DATA_DIR, path_metadata_file), "r") as f:
         metadata_dict = json.load(f)
