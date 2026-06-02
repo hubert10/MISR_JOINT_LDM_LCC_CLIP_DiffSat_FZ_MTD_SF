@@ -236,8 +236,7 @@ def adding_encoded_metadata(
         #     norm(sin_time),
         #     norm(cos_time),
         # ]
-
-        return [int(year)] + [int(month), int(day), sec_day]
+        return int(year) + [int(month), int(day), sec_day]
 
     def metadata_normalize(metadata, base_year=2018, scale=1000):
         x, y, mean_alti, year, month, day, time = metadata
