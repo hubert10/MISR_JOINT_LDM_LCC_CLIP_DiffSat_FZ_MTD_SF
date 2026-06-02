@@ -113,6 +113,7 @@ diff_sat_weights: "/my_data/pretrain_weights/finetune_sd21_sn-satlas-fmow_snr5_m
 mode: "train" # ["train", "eval" ]
 norm_type: "scale" # ["scale", "min-max", "mean-std"]
 sits_temp_merging: "mean" # ["mean", "sum"]
+use_ema: False
 
 resume: False
 debug: False
