@@ -107,7 +107,7 @@ class SITSAerialSegmenter(nn.Module):
 
     def _load_checkpoint(self, path):
         """Load checkpoint and extract state_dict."""
-        ckpt = torch.load(path, map_location="cpu")
+        ckpt = torch.load(path, map_location="cpu", weights_only=True)
         return ckpt["state_dict"] if "state_dict" in ckpt else ckpt
 
     def load_pretrained_weights(self, model, weights_path):

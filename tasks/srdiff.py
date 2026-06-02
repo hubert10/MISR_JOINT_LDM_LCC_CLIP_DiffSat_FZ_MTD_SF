@@ -140,7 +140,7 @@ class SRDiffTrainer(Trainer):
 
     def _load_checkpoint(self, path):
         """Load checkpoint and extract state_dict."""
-        ckpt = torch.load(path, map_location="cpu")
+        ckpt = torch.load(path, map_location="cpu", weights_only=True)
         return ckpt["state_dict"] if "state_dict" in ckpt else ckpt
 
     def load_pretrained_weights(self, model, weights_path):
@@ -236,7 +236,7 @@ class SRDiffTrainer(Trainer):
         print(f"\n| Loading pretrained weights from: {weights_path}")
 
         # --- Load checkpoint ---
-        ckpt = torch.load(weights_path, map_location="cpu")
+        ckpt = torch.load(weights_path, map_location="cpu", weights_only=True)
 
         # --- Extract state_dict ---
         if "state_dict" in ckpt:

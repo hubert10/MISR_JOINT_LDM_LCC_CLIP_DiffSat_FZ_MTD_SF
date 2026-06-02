@@ -208,7 +208,7 @@ def load_ckpt(cur_model, ckpt_base_dir, model_name="model", force=True, strict=T
     if os.path.isfile(ckpt_base_dir):
         base_dir = os.path.dirname(ckpt_base_dir)
         ckpt_path = ckpt_base_dir
-        checkpoint = torch.load(ckpt_base_dir, map_location="cpu")
+        checkpoint = torch.load(ckpt_base_dir, map_location="cpu", weights_only=True)
     else:
         base_dir = ckpt_base_dir
         checkpoint, ckpt_path = get_last_checkpoint(ckpt_base_dir)
